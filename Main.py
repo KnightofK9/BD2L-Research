@@ -1,5 +1,10 @@
 import Constant
 from Detector import Detector
+from VideoExtractor import VideoExtractor
+
+# video_extractor = VideoExtractor()
+# video_extractor.extract_to(video_extractor.get_random_stream_url(), "./out/", 0.5, 10, True)
+
 
 
 # detector = Detector(Constant.DARK_NET_CFG_PATH + "yolo.cfg",  "yolo.weights",

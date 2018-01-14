@@ -1,0 +1,5 @@
+out/
+lib/darknet/lib_win/
+.idea/
+yolo.weights
+*.dll
