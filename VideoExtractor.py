@@ -22,12 +22,16 @@ class VideoExtractor:
             print "Clearing output folder {}".format(output_path)
             shutil.rmtree(output_path)
             os.mkdir(output_path)
+        (major_ver, minor_ver, subminor_ver) = cv2.__version__.split('.')
+        print "Url:{}".format(input_path)
         skip_sec = 1 / sampling_rate
         video = cv2.VideoCapture(input_path)
         success, image = video.read()
+        if not success:
+            print "Load video failed!"
+            return
         count = 0
         fps = 0
-        (major_ver, minor_ver, subminor_ver) = cv2.__version__.split('.')
         if int(major_ver) < 3:
             fps = video.get(cv2.cv.CV_CAP_PROP_FPS)
             print "Frames per second using video.get(cv2.cv.CV_CAP_PROP_FPS): {0}".format(fps)

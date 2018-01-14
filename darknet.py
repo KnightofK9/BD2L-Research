@@ -42,11 +42,12 @@ class METADATA(Structure):
                 ("names", POINTER(c_char_p))]
 
 
-lib_path = Constant.DARK_NET_LIB_LINUX + "libdarknet.so"
 if platform == "linux" or platform == "linux2":
-    lib_path = Constant.DARK_NET_LIB_MAC + "libdarknet.so"
+    lib_path = Constant.DARK_NET_LIB_LINUX + "libdarknet.so"
 elif platform == "win32":
     lib_path = Constant.DARK_NET_LIB_WIN + "yolo_cpp_dll.dll"
+else:
+    lib_path = Constant.DARK_NET_LIB_MAC + "libdarknet.so"
 
 lib = cdll.LoadLibrary(lib_path)
 lib.network_width.argtypes = [c_void_p]
