@@ -15,6 +15,8 @@ class Detector:
         return darknet.detect(self.net, self.meta, image_url)
 
     def detect_all_image_in_folder(self, folder_url, output_folder_url):
+        import time
+        now = time.time()
         for filename in os.listdir(folder_url):
             if filename.endswith(".jpg") or filename.endswith(".png"):
                 img_path = folder_url + filename
@@ -25,6 +27,9 @@ class Detector:
                 self.write_image_to_path(img, output_path)
                 print "{} :".format(filename)
                 print "{}".format(res_list)
+        later = time.time()
+        difference = int(later - now)
+        print "Task finished in {} s".format(difference)
 
     def get_image_from_path(self, img_path):
         return cv2.imread(img_path)
