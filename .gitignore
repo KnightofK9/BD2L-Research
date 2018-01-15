@@ -3,3 +3,4 @@ lib/darknet/lib_win/
 .idea/
 yolo.weights
 *.dll
+Test.mp4

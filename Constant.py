@@ -1,4 +1,4 @@
-DARK_NET_PATH = "lib/darknet/"
+DARK_NET_PATH = "./lib/darknet/"
 DARK_NET_LIB_MAC = DARK_NET_PATH + "lib_mac/"
 DARK_NET_LIB_WIN = DARK_NET_PATH + "lib_win/"
 DARK_NET_LIB_LINUX = DARK_NET_PATH + "lib_linux/"

@@ -2,6 +2,6 @@ classes= 80
 train  = /home/pjreddie/data/coco/trainvalno5k.txt
 #valid  = coco_testdev
 valid = data/coco_val_5k.list
-names = /Users/phantruongthanh/Git/darknet/data/coco.names
+names = /media/phantruongthanh/New Volume/3-Learning/BD2L/BD2L-Research/lib/darknet/cfg/coco.names
 backup = /home/pjreddie/backup/
 eval=coco

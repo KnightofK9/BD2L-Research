@@ -49,7 +49,8 @@ elif platform == "win32":
 else:
     lib_path = Constant.DARK_NET_LIB_MAC + "libdarknet.so"
 
-lib = cdll.LoadLibrary(lib_path)
+lib = CDLL(lib_path, RTLD_GLOBAL)
+# lib = CDLL("./libdarknet.so", RTLD_GLOBAL)
 lib.network_width.argtypes = [c_void_p]
 lib.network_width.restype = c_int
 lib.network_height.argtypes = [c_void_p]
@@ -157,7 +158,7 @@ if __name__ == "__main__":
     # meta = load_meta("cfg/imagenet1k.data")
     # r = classify(net, meta, im)
     # print r[:10]
-    net = load_net("cfg/yolo.cfg", "weights/yolo.weights", 0)
-    meta = load_meta("cfg/coco.data")
-    r = detect(net, meta, "data/dog.jpg")
+    net = load_net("lib/darknet/cfg/yolo.cfg", "yolo.weights", 0)
+    meta = load_meta("lib/darknet/cfg/coco.data")
+    r = detect(net, meta, "out/frame_00000.jpg")
     print r
