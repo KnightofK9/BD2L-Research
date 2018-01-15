@@ -52,7 +52,7 @@ class VideoExtractor:
             if current_time >= skip_sec:
                 current_time = 0
                 number_name = "{0:05d}".format(count)
-                output_url = output_path + "frame_" + number_name + ".jpg";
+                output_url = output_path + "frame_" + number_name + ".jpg"
                 cv2.imwrite(output_url, image)
                 print "Writing {}".format(output_url)
                 count += 1
