@@ -2,7 +2,7 @@ import cv2
 import os
 import shutil
 
-from Extractor import Extractor
+from extractor import Extractor
 
 
 class VideoExtractor:
