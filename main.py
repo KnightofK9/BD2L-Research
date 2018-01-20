@@ -1,10 +1,9 @@
 import constant
-# from Detector import Detector
+# from darknetdetector import Detector
 from videoextractor import VideoExtractor
 
-# video_extractor = VideoExtractor()
-# video_extractor.extract_to(video_extractor.get_random_stream_url(), "./out/", 0.5, 10, True)
-# video_extractor.extract_to("Test.mp4", "./out/", 0.5, 10, True)
+video_extractor = VideoExtractor()
+video_extractor.extract_to(video_extractor.get_random_stream_url(), "./out/", 0.5, 10, True)
 
 
 
