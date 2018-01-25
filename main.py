@@ -7,7 +7,7 @@ from platedetector import PlateDetector
 # video_extractor.extract_to(video_extractor.get_random_stream_url(), "./out/", 0.5, 10, True)
 
 plate_detector = PlateDetector()
-plate_detector.load_and_detect_img("./data/plate/001.JPG")
+plate_detector.load_and_detect_img("./data/plate/test/001.JPG")
 
 # detector = Detector(Constant.DARK_NET_CFG_PATH + "yolo.cfg",  "yolo.weights",
 #                     Constant.DARK_NET_CFG_PATH + "coco.data")
